@@ -12,11 +12,11 @@ def binarySearch(array,search_int):
     right = len(array) - 1
 
     while(left<=right):
-        mid = int(left+((right-left)/2)) #middle of hte array
+        mid = int(left+((right-left)/2)) #middle of the array
 
         if(array[mid] == search_int):
             return True
         elif(search_int < array[mid]):
             right = mid - 1
         else:
-            leftleft = mid + 1
+            left = mid + 1

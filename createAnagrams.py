@@ -1,5 +1,4 @@
 def number_needed(a, b):
-    pass
     num_need = 0
     a_dict = {}
     b_dict = {}
@@ -34,4 +33,3 @@ a = input().strip()
 b = input().strip()
 
 print(number_needed(a, b))
-
