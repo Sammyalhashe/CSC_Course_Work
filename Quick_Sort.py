@@ -10,7 +10,7 @@ def Quick_Sort(array):
 def quicksort(array, left, right):
     if(left >= right):
         return
-    pivot = array(int(random() * len(array)))
+    pivot = array[int(random() * len(array))]
     index = partition(array, left, right, pivot)
     quicksort(array, left, index - 1)
     quicksort(array, index, right)
@@ -31,3 +31,10 @@ def partition(array, left, right, pivot):
 
 def swap(array, left, right):
     array[left], array[right] = array[right], array[left]
+
+
+if __name__ == '__main__':
+    test = [1, 4, 3, 5, 6, 32, 432, 1, 123, 32, 2, 43]
+    print(test)
+    Quick_Sort(test)
+    print(test)

@@ -18,16 +18,19 @@ def number_needed(a, b):
             res_dict[key] = abs(val - b_dict[key])
         elif key not in b_dict:
             num_need += val
+            print("remove %d %s chars" % (val, key))
     for key, val in b_dict.items():
         if key not in a_dict:
             num_need += val
+            print("remove %d %s chars" % (val, key))
     for key, val in res_dict.items():
         num_need += val
+        print("remove %d %s chars" % (val, key))
 
     return num_need
 
 
-a = input().strip()
-b = input().strip()
+a = 'Hello Darkness my old friend'
+b = 'Ive come to talk to you again'
 
 print(number_needed(a, b))
