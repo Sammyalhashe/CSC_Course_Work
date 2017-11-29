@@ -22,7 +22,7 @@ def mergesort(lists, result):
     if len(lists) < 2:
         return lists, 0
     else:
-        middle = int(len(lists) // 2)
+        middle = len(lists) // 2
         left, swaps0 = mergesort(lists[:middle], result[:middle])
         right, swaps1 = mergesort(lists[middle:], result[middle:])
         res, swaps = merge(left, right, result)
