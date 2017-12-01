@@ -1,6 +1,4 @@
-
-
-def merge(left, right, result):
+def merge(left, right):
     swaps = 0
     result = []
     i, j = 0, 0
@@ -18,19 +16,24 @@ def merge(left, right, result):
     return result, swaps
 
 
-def mergesort(lists, result):
+def mergesort(lists):
     if len(lists) < 2:
         return lists, 0
     else:
-        middle = len(lists) // 2
-        left, swaps0 = mergesort(lists[:middle], result[:middle])
-        right, swaps1 = mergesort(lists[middle:], result[middle:])
-        res, swaps = merge(left, right, result)
+        middle = int(len(lists) // 2)
+        left, swaps0 = mergesort(lists[:middle])
+        right, swaps1 = mergesort(lists[middle:])
+        res, swaps = merge(left, right)
         return res, (swaps + swaps0 + swaps1)
 
 
 def countInversions(arr):
     # Complete this function
-    result = []
-    sort_arr, swaps = mergesort(arr, result)
-    return swaps
+    sort_arr, swaps = mergesort(arr)
+    return sort_arr, swaps
+
+
+if __name__ == '__main__':
+    test = [1, 32, 122, 32, 12, 311, 2, 3, 21, 2]
+    result, no_swaps = countInversions(test)
+    print("sorted array:", result, "swaps:", no_swaps)

@@ -1,6 +1,9 @@
 # Implementation of Quick Sort in Python
 # nlog(n) best case; n^2 worst case
-from random import random
+try:
+    from random import random
+except ImportError as e:
+    print(e)
 
 
 def Quick_Sort(array):
@@ -10,6 +13,7 @@ def Quick_Sort(array):
 def quicksort(array, left, right):
     if(left >= right):
         return
+    # random() returns in range [0.0,1.0)
     pivot = array[int(random() * len(array))]
     index = partition(array, left, right, pivot)
     quicksort(array, left, index - 1)

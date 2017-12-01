@@ -37,3 +37,5 @@ if __name__ == '__main__':
     print(test)
     new = Insort(7, test, lo=0, hi=None)
     print(new)
+    news = Insort(2, new)
+    print(news)
