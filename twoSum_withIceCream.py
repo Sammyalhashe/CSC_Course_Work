@@ -43,7 +43,10 @@ for a0 in range(t):
             if(m < final[-1][1]):
                 final.pop()
             else:
-                if(len(list(filter(lambda x: x[1] == m - final[-1][1], final))) == 0 and bought == 0):
+                # Theoretically buy an ince-cream, if you can't buy anything
+                # else after you bought the current one you shouldn't have
+                # bougthen it in the first place
+                if(len(list(filter(lambda x: x[1] == m - final[-1][1], final[:len(final) - 1]))) == 0 and bought == 0):
                     final.pop()
                 else:
                     m -= final[-1][1]

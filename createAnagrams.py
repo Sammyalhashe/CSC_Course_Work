@@ -26,7 +26,6 @@ def number_needed(a, b):
     for key, val in res_dict.items():
         num_need += val
         print("remove %d %s chars" % (val, key))
-
     return num_need
 
 

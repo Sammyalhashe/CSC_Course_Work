@@ -6,6 +6,7 @@ A Node is defined as:
 
 
 class Node(object):
+
     def __init__(self, data=None, next_node=None):
         self.data = data
         self.next = next_node
@@ -13,7 +14,7 @@ class Node(object):
 
 def has_cycle(head):
     if(head is None):
-        return True
+        return True  # convention of the question
     visited = []
     while(head.next is not None):
         if(head in visited and (visited.index(head) != (len(visited) - 1))):
