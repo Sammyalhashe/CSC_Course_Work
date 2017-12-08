@@ -85,6 +85,7 @@ def bisect_left(a, x, lo=0, hi=None):
             hi = mid
     return lo
 
+
 # Overwrite above definitions with a fast C implementation
 try:
     from _bisect import *

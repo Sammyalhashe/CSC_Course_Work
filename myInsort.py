@@ -25,8 +25,8 @@ def Insort(x, array, lo=0, hi=None):
 
     mid = hi // 2
     if(x <= array[mid]):
-        hi = mid
-        return Insort(x, array[:hi + 1], lo=0, hi=None) + array[hi + 1:]
+        hi = mid + 1  # convention
+        return Insort(x, array[:hi], lo=0, hi=None) + array[hi:]
     else:
         lo = mid + 1
         return array[:lo] + Insort(x, array[lo:], lo=0, hi=None)

@@ -4,6 +4,7 @@ def number_needed(a, b):
     b_dict = {}
     res_dict = {}
     for chara in a:
+        # could have just used defaultdict here
         if chara not in a_dict:
             a_dict[chara] = 1
         else:
