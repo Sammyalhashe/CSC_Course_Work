@@ -1,7 +1,12 @@
+/*input
+{[()]}
+{[(])}
+{{[[(())]]}}
+*/
 import java.util.*;
 import java.io.*;
 
-class BalanceBrackets {
+public class balancedBrackets {
 
     public static boolean check(String input) throws IOException{
         HashMap<String, String> Brackets = new HashMap<>(3);
@@ -33,7 +38,7 @@ class BalanceBrackets {
         while (sc.hasNext()) {
             String input = sc.next();
             ret = check(input);
-            System.out.println(ret ? "true" : "false");
+            System.out.println(ret ? "YES" : "NO");
         }
 
     }

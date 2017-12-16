@@ -1,3 +1,14 @@
+'''input
+"2"
+"4"
+"5"
+"1 4 5 3 2"
+"4"
+"4"
+"2 2 4 3"
+'''
+
+
 class tuples2:
 
     def __init__(self, val1, val2):
@@ -7,15 +18,6 @@ class tuples2:
         return self.tupl[1]
 
 
-'''input
-2
-4
-5
-1 4 5 3 2
-4
-4
-2 2 4 3
-'''
 t = int(input().strip())
 for a0 in range(t):
     m = int(input().strip())

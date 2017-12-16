@@ -6,7 +6,7 @@
 
 def Insort(x, array, lo=0, hi=None):
     if (array is None):
-        return
+        return [x]
     if (array == []):
         return array.append(x)
     if (hi is None):

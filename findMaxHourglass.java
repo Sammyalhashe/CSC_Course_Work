@@ -1,10 +1,18 @@
+/*input
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+*/
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class findMaxHourglass {
 
     public static int maxHourglass(int[][] arr, int n, int m) {
         int maxhour = -100;
