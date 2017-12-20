@@ -1,3 +1,16 @@
+'''input
+10
+"12 4 19 3 2"
+"2 8 9 17 7"
+"2 3 15 9 4"
+"16 10 20 4 17"
+"18 11 7 20 12"
+"19 1 3 12 9"
+"13 5 7 9 6"
+"9 18 3 16 10"
+"16 18 6 3 9"
+"1 10 14 19 6"
+'''
 # More pythonic implementation of merge sort
 
 
@@ -50,3 +63,8 @@ if __name__ == '__main__':
     test = [1, 32, 122, 32, 12, 311, 2, 3, 21, 2]
     result = Merge_Sort_Pythonic(test)
     print(result)
+    t = input()
+    for i in range(t):
+        test = list(map(lambda x: int(x), input().strip().split(' ')))
+        tested = Merge_Sort_Pythonic(test)
+        print(tested)

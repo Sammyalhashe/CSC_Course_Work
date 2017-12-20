@@ -17,6 +17,7 @@ def has_cycle(head):
         return True  # convention of the question
     visited = []
     while(head.next is not None):
+        # not considering going immedietely back to itself a cycle
         if(head in visited and (visited.index(head) != (len(visited) - 1))):
             return True
         else:
