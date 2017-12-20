@@ -1,12 +1,3 @@
-class tuples2:
-
-    def __init__(self, val1, val2):
-        self.tupl = (val1, val2)
-
-    def comparitor(self):
-        return self.tupl[1]
-
-
 '''input
 2
 4
@@ -16,11 +7,22 @@ class tuples2:
 4
 2 2 4 3
 '''
-t = int(input().strip())
+
+
+class tuples2:
+
+    def __init__(self, val1, val2):
+        self.tupl = (val1, val2)
+
+    def comparitor(self):
+        return self.tupl[1]
+
+
+t = int(input())
 for a0 in range(t):
-    m = int(input().strip())
-    n = int(input().strip())
-    a = list(map(int, input().strip().split(' ')))
+    m = int(input())
+    n = int(input())
+    a = list(map(int, input().split(' ')))
 
     # This next line is messy (I know), but what it does is takes the array, a, and then turns it into a sorted array
     # based on the price value (the second value in the enumeration) and places the result into a 2 valued tuple object I created.
