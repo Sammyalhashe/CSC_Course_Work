@@ -1,5 +1,18 @@
 
 def breakdown(points):
+    """How many ways can a player score a certain amount of points in basketball
+
+    Base Cases are with scoring 0, 1, 2, and 3 points
+    -> Recurrence relation is that the number of way to score 
+    i points = # of ways for i-1 + # of ways for i-2 + # of ways for i-3 pts
+
+    Arguments:
+        points {int} -- number of points scored by a player
+
+    Returns:
+        int -- Number of ways the player could have scored that many points
+    """
+
     print(points)
     if points <= 0:
         return 0
@@ -24,7 +37,8 @@ def breakdown(points):
     N[0] = 0  # didn't score any points -> no way to sum up to 0 with 1, 2, or 3
     N[1] = 1  # scored only one point, only one way: with one free throw
     N[2] = 2  # two free throws or one 2-pointer
-    N[3] = 4  # one three pointer or three free throws or a free throw and a two pointer (two ways)
+    # one three pointer or three free throws or a free throw and a two pointer (two ways)
+    N[3] = 4
 
     # DP Step
     """Recurrence relation below
@@ -41,5 +55,6 @@ def breakdown(points):
 
 
 if __name__ == '__main__':
-    pts = 33
-    print("Steph Curry Scored %d points. There are %d possible ways he could have done that" % (pts, breakdown(pts)))
+    PTS = 33
+    print("Steph Curry Scored %d points. There are %d possible ways he could have done that" % (
+        PTS, breakdown(PTS)))

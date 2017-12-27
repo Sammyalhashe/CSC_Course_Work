@@ -1,11 +1,11 @@
 '''input
-"2"
-"4"
-"5"
-"1 4 5 3 2"
-"4"
-"4"
-"2 2 4 3"
+2
+4
+5
+1 4 5 3 2
+4
+4
+2 2 4 3
 '''
 
 
@@ -18,11 +18,14 @@ class tuples2:
         return self.tupl[1]
 
 
-t = int(input().strip())
+t = int(input())
+
+# t = int(input().strip())
+
 for a0 in range(t):
-    m = int(input().strip())
-    n = int(input().strip())
-    a = list(map(int, input().strip().split(' ')))
+    m = int(input())
+    n = int(input())
+    a = list(map(int, input().split(' ')))
 
     # This next line is messy (I know), but what it does is takes the array, a, and then turns it into a sorted array
     # based on the price value (the second value in the enumeration) and places the result into a 2 valued tuple object I created.
