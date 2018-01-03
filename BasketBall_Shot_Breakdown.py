@@ -3,7 +3,7 @@ def breakdown(points):
     """How many ways can a player score a certain amount of points in basketball
 
     Base Cases are with scoring 0, 1, 2, and 3 points
-    -> Recurrence relation is that the number of way to score 
+    -> Recurrence relation is that the number of way to score
     i points = # of ways for i-1 + # of ways for i-2 + # of ways for i-3 pts
 
     Arguments:
