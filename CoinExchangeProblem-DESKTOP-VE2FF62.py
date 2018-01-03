@@ -5,7 +5,7 @@ denokminations,
 d = [d1,d2,d3,d4,d5,...dn]
 Task is to give an optimum list of coins,
 C = [c1,c2,c3,...] s.t. A = c[1]+c[2]+c[3]+...
-Note: Penny is necessary to solve this problem
+Note: Penny is necessary to solve this problem, so it will be in the list of denominations passed in
 """
 
 try:
@@ -44,7 +44,7 @@ def CoinExchange(A, d):
     # Load base cases
     for i in range(A + 1):
         for j in range(len(denoms)):
-            N[0][j] = 0
+            N[0][j] = 0  # Unnecesary bt just for show
             N[i][0] = maxsize
 
     for i in range(1, A + 1):
@@ -69,4 +69,5 @@ if __name__ == '__main__':
     denoms = [1, 2, 3, 5, 6, 10, 15]
     Amount = 34
     opt, coins = CoinExchange(Amount, denoms)
-    print(opt, coins)
+    print("For sum to %d, with these denominations offered: %s, the optimum number of coins: %d, with these coins chosen: %s" %
+          (Amount, str(' '.join(list(map(lambda x: str(x), denoms)))), opt, str(' '.join(list(map(lambda x: str(x), coins))))))

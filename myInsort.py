@@ -5,6 +5,20 @@
 
 
 def Insort(x, array, lo=0, hi=None):
+    """inserts element into already sorted array
+
+    Arguments:
+        x {int} -- element to be inserted
+        array {int} -- holds integer elements
+
+    Keyword Arguments:
+        lo {int} -- left end of subarray considered in recursive step (default: {0})
+        hi {int} -- right end of subarray considered in recursive step (default: {None})
+
+    Returns:
+        list -- list with new element inserted (still sorted)
+    """
+
     if (array is None):
         return [x]
     if (array == []):
@@ -38,4 +52,6 @@ if __name__ == '__main__':
     new = Insort(7, test, lo=0, hi=None)
     print(new)
     news = Insort(2, new)
+    print(news)
+    news = Insort(8, news)
     print(news)

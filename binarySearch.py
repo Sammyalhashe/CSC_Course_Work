@@ -55,7 +55,7 @@ def binarySearch(array, search_int):
     right = len(array) - 1
 
     while(left <= right):
-        mid = int(left + ((right - left) / 2))  # middle of the array
+        mid = left + ((right - left) // 2)  # middle of the array
 
         if(array[mid] == search_int):
             return True
