@@ -23,7 +23,7 @@ while True:
             lines = fh.readlines()
             fh.seek(0)
             for line in lines:
-                print(line, any([site in line for site in sites]))
+                #print(line, any([site in line for site in sites]))
                 if not any([site in line for site in sites]):
                     fh.write(line)
             fh.truncate()
