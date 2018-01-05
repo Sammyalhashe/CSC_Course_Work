@@ -8,7 +8,7 @@ localhost = '127.0.0.1'
 sites = ['www.facebook.com', 'facebook.com']
 
 while True:
-    if dt(dt.now().year, dt.now().month, dt.now().day, 22) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 23):
+    if dt(dt.now().year, dt.now().month, dt.now().day, 9) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 17):
         print("Work Time...")
         with open(host, 'r+') as fh:
             content = fh.read()
