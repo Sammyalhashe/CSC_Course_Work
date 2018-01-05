@@ -2,7 +2,7 @@ import time
 from datetime import datetime as dt
 
 temp_host = r".\host"
-host = r"C:\Windows\System32\drivers\etc"
+host = r"C:\Windows\System32\drivers\etc\hosts"
 localhost = '127.0.0.1'
 
 sites = ['www.facebook.com', 'facebook.com']
