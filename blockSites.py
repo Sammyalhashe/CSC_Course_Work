@@ -5,7 +5,7 @@ temp_host = r".\host"
 host = r"C:\Windows\System32\drivers\etc\hosts"
 localhost = '127.0.0.1'
 
-sites = ['www.facebook.com', 'facebook.com']
+sites = ['www.facebook.com', 'facebook.com','www.youtube.com','youtube.com','www.twitter.com','twitter.com','www.espn.com','espn.com']
 
 while True:
     if dt(dt.now().year, dt.now().month, dt.now().day, 9) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 17):
